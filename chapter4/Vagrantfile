@@ -45,7 +45,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: <<-SHELL
     # https://docs.docker.com/engine/installation/linux/docker-ce/centos/
     # https://github.com/docker/docker-install
-    sudo yum install -y git vim gcc glibc-static telnet
+    sudo yum install -y git wget vim gcc glibc-static telnet
     git clone sudo yum install -y git vim gcc glibc-static telnet
     curl -fsSL get.docker.com -o get-docker.sh
     sh get-docker.sh
