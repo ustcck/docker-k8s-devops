@@ -29,13 +29,7 @@ Vagrant.configure(2) do |config|
       config.vm.network :private_network, ip: opts[:eth1]
     end
   end
-  config.vm.synced_folder ".", "/home/docker-host/"
-  config.vm.provision "shell", inline: <<-SHELL
-    # https://docs.docker.com/engine/installation/linux/docker-ce/centos/
-    # https://github.com/docker/docker-install
-    sudo yum install -y git vim gcc glibc-static telnet
-    curl -fsSL get.docker.com -o get-docker.sh
-    sh get-docker.sh
-    sudo systemctl start docker
-  SHELL
+  config.vm.network "forwarded_port", guest: 80, host: 8000
+  config.vm.synced_folder "./labs", "/home/vagrant/labs"
+  config.vm.provision "shell", privileged: true, path: "./setup.sh"
 end
