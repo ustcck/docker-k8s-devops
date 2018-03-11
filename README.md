@@ -7,7 +7,11 @@
 
 大家如果发现任何错误，可以在慕课网问答区提问，或者直接在此提交merge request，提交更改。
 
+## 关于翻墙
 
+本课程里部分link可能需要翻墙，大家如果自己没有VPN的话，可以尝试蓝灯
+
+https://github.com/getlantern/forum
 
 ## 本课程的一些常用链接汇总
 
