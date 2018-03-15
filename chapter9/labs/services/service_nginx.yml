@@ -4,8 +4,8 @@ metadata:
   name: nginx-service
 spec:
   ports:
-  - port: 8080
-    nodePort: 8080
+  - port: 32333
+    nodePort: 32333
     targetPort: nginx-port
     protocol: TCP
   selector:

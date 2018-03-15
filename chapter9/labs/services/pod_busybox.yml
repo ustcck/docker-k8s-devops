@@ -5,6 +5,8 @@ metadata:
   labels:
     app: busybox
 spec:
+  nodeSelector:
+    hardware: good
   containers:
   - name: busybox-container
     image: busybox
